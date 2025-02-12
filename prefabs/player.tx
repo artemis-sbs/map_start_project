@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="Cosmos-card-tiles.tsx"/>
+ <object name="Player" type="@player/spawn" gid="2" width="50" height="50">
+  <properties>
+   <property name="can_change_name" type="bool" value="false"/>
+   <property name="can_change_ship" type="bool" value="false"/>
+  </properties>
+ </object>
+</template>

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "lib": ["es2020"],
+      "module": "es2020",
+      "target": "es2020",
+      "sourceMap": false,
+      "rootDir": "./src",
+      "outDir": "."
+    },
+    "include": ["src/example.ts"],
+    "exclude": ["node_modules/*"]
+
+  }

@@ -1,0 +1,24 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+        {
+            "arguments": "%projectpath/commands/export.py %mapfile",
+            "command": "python",
+            "enabled": true,
+            "name": "export_map",
+            "saveBeforeExecute": true,
+            "shortcut": null,
+            "showOutput": true,
+            "workingDirectory": "%mappath"
+        }
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "export",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+    ]
+}

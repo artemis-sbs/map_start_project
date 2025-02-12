@@ -1,0 +1,52 @@
+{
+    "activeFile": "maps/FirstMaptmx.tmx",
+    "console.history": [
+        "example.js",
+        "export/example.js",
+        "example.js"
+    ],
+    "expandedProjectPaths": [
+        "tiled-maps-master",
+        "maps",
+        ".",
+        "export",
+        "prefabs"
+    ],
+    "fileStates": {
+        "maps/FirstMaptmx.tmx": {
+            "expandedGroupLayers": [
+                2,
+                26,
+                12
+            ],
+            "scale": 0.6194,
+            "selectedLayer": 16,
+            "viewCenter": {
+                "x": 1065.5473038424282,
+                "y": 548.1110752340976
+            }
+        },
+        "prefabs/Cosmos-card-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "tiled-maps-master/FirstMaptmx.tmx": {
+            "scale": 1.15235,
+            "selectedLayer": 19,
+            "viewCenter": {
+                "x": 499.84813641688726,
+                "y": 254.69692367770205
+            }
+        }
+    },
+    "last.exportedFilePath": "F:/a/tiled/cosmos",
+    "last.workingDirectory": "C:/Users/DougR/OneDrive/Documents/cosmos",
+    "map.lastUsedExportFilter": "Artemis Cosmos (*.py)",
+    "openFiles": [
+        "maps/FirstMaptmx.tmx"
+    ],
+    "project": "cosmos_map_edit.tiled-project",
+    "recentFiles": [
+        "maps/FirstMaptmx.tmx",
+        "tiled-maps-master/FirstMaptmx.tmx"
+    ]
+}

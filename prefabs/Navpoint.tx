@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="NAV ##" type="@prefab/navpoint">
+  <properties>
+   <property name="color" type="color" value="#ff00aa00"/>
+  </properties>
+  <point/>
+ </object>
+</template>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="Mines" type="mines" width="27.7056" height="25.7223">
+  <ellipse/>
+ </object>
+</template>

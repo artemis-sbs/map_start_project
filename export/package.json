@@ -1,0 +1,14 @@
+{
+  "name": "export",
+  "version": "1.0.0",
+  "main": "example.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@mapeditor/tiled-api": "^1.11.0"
+  }
+}
