@@ -59,7 +59,8 @@ def process_object_group(group, prefix):
     ret = []
     objs = []
     group_name = group.attrib.get("name","")
-    func_name = f"{prefix}_{group_name}"
+    func_name = f"{prefix}_{group_name}".lower().replace(" ", "_")
+    
     for child in group:
         if child.tag =="objectgroup":
             ret.extend(process_object_group(child, func_name))
@@ -68,10 +69,10 @@ def process_object_group(group, prefix):
     
     if len(objs)>0:
         stream = StringIO()
-        stream.write(f"def {func_name}():\n")
+        stream.write(f"def {func_name}(OFFSET_X=0, OFFSET_Z=0):\n")
         stream.write(f"    map_data = {objs}\n")
         stream.write(f"    for p in map_data:\n")
-        stream.write(f"        prefab_spawn(p['label'], p['data'] )\n")
+        stream.write(f"        prefab_spawn(p['label'], p['data'], OFFSET_X, OFFSET_Z )\n")
 
         ret.append(stream.getvalue())
 
