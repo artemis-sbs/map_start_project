@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object type="prefab_spawn">
+  <properties>
+   <property name="spawn_type" propertytype="terrain" value="asteroid"/>
+  </properties>
+  <polyline points="-9,102 -43.5,244.5 -203.5,286"/>
+ </object>
+</template>

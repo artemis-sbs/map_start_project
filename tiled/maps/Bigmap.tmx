@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="500" height="500" tilewidth="10" tileheight="10" infinite="0" nextlayerid="4" nextobjectid="24">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-up" width="500" height="500" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="40">
+ <objectgroup id="5" name="enemy_fleets_arvonian_01">
+  <object id="30" template="../prefabs/fleet_raider.tx" x="1718.63" y="1345">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+  <object id="32" template="../prefabs/fleet_raider.tx" x="1756.75" y="1337.38">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+  <object id="33" template="../prefabs/fleet_raider.tx" x="1739" y="1355.5">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="enemy_fleets_arvonian_02">
+  <object id="36" template="../prefabs/fleet_raider.tx" x="422.5" y="312.875">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+  <object id="37" template="../prefabs/fleet_raider.tx" x="405.125" y="296.5">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+  <object id="35" template="../prefabs/fleet_raider.tx" x="401.875" y="331.75">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+  <object id="34" template="../prefabs/fleet_raider.tx" x="378.125" y="310.75">
+   <properties>
+    <property name="race" propertytype="race" value="arvonian"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="enemy_arvonian_stations">
+  <object id="28" template="../prefabs/station_arvonian.tx" name="SA ##" x="400" y="312"/>
+  <object id="29" template="../prefabs/station_arvonian.tx" name="SA ##" x="1736" y="1336"/>
+  <object id="27" name="Arvonian fleet Spwan trigger" type="trigger_rect" x="1289.21" y="951.394" width="998.788" height="812.606">
+   <properties>
+    <property name="end_on_ennter" type="bool" value="true"/>
+    <property name="trigger_label" value="trigger_enemy_fleets_arvonian_01"/>
+    <property name="trigger_roles" value="__player__"/>
+   </properties>
+  </object>
+  <object id="38" name="Arvonian fleet Spwan trigger" type="trigger_rect" x="1.21212" y="107.394" width="998.788" height="812.606">
+   <properties>
+    <property name="end_on_ennter" type="bool" value="true"/>
+    <property name="trigger_label" value="trigger_enemy_fleets_arvonian_02"/>
+    <property name="trigger_roles" value="__player__"/>
+   </properties>
+  </object>
+  <object id="39" template="../prefabs/station_civil.tx" x="2188" y="1904"/>
+ </objectgroup>
  <objectgroup id="3" name="quad_one">
   <object id="18" template="../prefabs/Asteroid.tx" x="2475" y="2672" width="59.5" height="51"/>
   <object id="12" template="../prefabs/nebula_box.tx" x="2424" y="2695.5" width="51" height="43.5"/>
@@ -8,7 +66,7 @@
   <object id="1" template="../prefabs/station_command.tx" x="2504" y="2704"/>
   <object id="7" template="../prefabs/fleet_raider.tx" x="2386.61" y="2719.41">
    <properties>
-    <property name="fleet_difficulty" type="int" value="-1200"/>
+    <property name="fleet_difficulty" type="int" value="0"/>
    </properties>
   </object>
   <object id="8" template="../prefabs/station_torgoth.tx" x="2403.83" y="2739.33"/>

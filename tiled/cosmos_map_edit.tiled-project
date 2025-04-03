@@ -44,6 +44,19 @@
                 "ximni"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 2,
+            "name": "terrain",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "mine",
+                "asteroid",
+                "resource_asteroid",
+                "nebula"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }
