@@ -1,6 +1,6 @@
 # Prefabs
 
-These are proxies for labels, @prefabs, etc. defined in the MAST script.
+These are proxies for labels, etc. defined in the MAST script.
 
 Very basic right now.
 
@@ -13,6 +13,6 @@ Spawns a command base
 # Asteroid
 spawns and asteroid box.
 
-# Cosmos-card-tile.tsx
+# Cosmos-core-tile.tsx
 A tileset of images for the prefab template
 

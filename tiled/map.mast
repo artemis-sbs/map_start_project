@@ -1,0 +1,9 @@
+@map/first_map "Hello Cosmos"
+" This is my first map.
+
+    quad_one()
+    await task_schedule(spawn_players)
+    await task_schedule(docking_standard_player_station)
+    
+
+

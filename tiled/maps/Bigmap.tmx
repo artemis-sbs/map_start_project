@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="500" height="500" tilewidth="10" tileheight="10" infinite="0" nextlayerid="4" nextobjectid="24">
+ <objectgroup id="3" name="quad_one">
+  <object id="18" template="../prefabs/Asteroid.tx" x="2475" y="2672" width="59.5" height="51"/>
+  <object id="12" template="../prefabs/nebula_box.tx" x="2424" y="2695.5" width="51" height="43.5"/>
+  <object id="19" template="../prefabs/nebula_box.tx" x="2447.5" y="2649" width="38" height="32"/>
+  <object id="13" template="../prefabs/Asteroid.tx" x="2497" y="2686.5" width="61" height="49"/>
+  <object id="1" template="../prefabs/station_command.tx" x="2504" y="2704"/>
+  <object id="7" template="../prefabs/fleet_raider.tx" x="2386.61" y="2719.41">
+   <properties>
+    <property name="fleet_difficulty" type="int" value="-1200"/>
+   </properties>
+  </object>
+  <object id="8" template="../prefabs/station_torgoth.tx" x="2403.83" y="2739.33"/>
+  <object id="9" template="../prefabs/monster_typhon.tx" x="2592.15" y="2711.36"/>
+  <object id="10" template="../prefabs/station_kralien.tx" x="2401" y="2665.5"/>
+  <object id="11" template="../prefabs/station_arvonian.tx" x="2398.5" y="2699.5"/>
+  <object id="14" template="../prefabs/station_civil.tx" x="2439.5" y="2635.5"/>
+  <object id="16" template="../prefabs/station_science.tx" x="2482" y="2635.5"/>
+  <object id="17" template="../prefabs/station_industry.tx" x="2464" y="2633"/>
+  <object id="20" template="../prefabs/station_command.tx" x="0" y="2500"/>
+  <object id="21" template="../prefabs/station_industry.tx" x="5000" y="2500"/>
+  <object id="22" template="../prefabs/station_science.tx" x="2500" y="0"/>
+  <object id="23" template="../prefabs/station_civil.tx" x="2520" y="5000"/>
+ </objectgroup>
+</map>

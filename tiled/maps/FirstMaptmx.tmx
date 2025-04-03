@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="left-up" width="100" height="100" tilewidth="10" tileheight="10" infinite="0" backgroundcolor="#888888" nextlayerid="27" nextobjectid="326">
+ <tileset firstgid="1" source="../prefabs/Cosmos-core-tiles.tsx"/>
+ <group id="26" name="ep1">
+  <group id="16" name="end">
+   <objectgroup id="24" name="show" class="trigger_end">
+    <object id="148" name="trigger" type="trigger_end" x="200.015" y="129.708" width="10" height="10"/>
+   </objectgroup>
+  </group>
+  <group id="17" name="nav3">
+   <objectgroup id="23" name="spawn_raiders"/>
+   <objectgroup id="22" name="show">
+    <object id="147" name="trigger" type="trigger_nav3" x="572.015" y="58.7083" width="179.665" height="168.301"/>
+   </objectgroup>
+  </group>
+  <group id="15" name="nav2">
+   <objectgroup id="21" name="spawn_raiders"/>
+   <objectgroup id="20" name="show">
+    <object id="146" name="trigger" type="trigger_nav2" x="604.682" y="576.708" width="179.665" height="168.301"/>
+   </objectgroup>
+  </group>
+  <group id="14" name="nav1">
+   <objectgroup id="19" name="spawn_raiders"/>
+   <objectgroup id="18" name="show">
+    <object id="145" name="trigger" type="trigger_nav1" x="140.682" y="431.375" width="179.665" height="168.301"/>
+   </objectgroup>
+  </group>
+  <group id="12" name="start">
+   <group id="7" name="TSN" class="side">
+    <objectgroup id="9" name="Players">
+     <object id="16" template="../prefabs/player.tx" name="Artemis" x="219.032" y="383.665" width="5" height="5" rotation="227.67"/>
+    </objectgroup>
+    <objectgroup id="5" name="Friendly NPC"/>
+    <objectgroup id="4" name="Stations">
+     <object id="19" template="../prefabs/station_command.tx" name="Coventry" x="200.125" y="139.438">
+      <properties>
+       <property name="a_object" type="object" value="0"/>
+       <property name="side" value="tsn"/>
+      </properties>
+     </object>
+     <object id="20" template="../prefabs/station_command.tx" name="DS ##" x="230.188" y="520.25"/>
+     <object id="78" template="../prefabs/station_command.tx" name="DS ##" x="379.75" y="370.583"/>
+     <object id="79" template="../prefabs/station_command.tx" name="DS ##" x="681.333" y="664.424" width="17.4545" height="17.0909"/>
+     <object id="80" template="../prefabs/station_command.tx" name="DS ##" x="450.667" y="888.333"/>
+     <object id="81" template="../prefabs/station_command.tx" name="DS ##" x="655.667" y="144.667"/>
+    </objectgroup>
+   </group>
+   <group id="2" name="terrain">
+    <objectgroup id="6" name="Nebula"/>
+    <objectgroup id="3" name="Asteroids">
+     <object id="1" template="../prefabs/Asteroid.tx" x="294" y="131"/>
+     <object id="2" template="../prefabs/Asteroid.tx" x="264" y="151"/>
+     <object id="3" template="../prefabs/Asteroid.tx" x="251" y="160"/>
+     <object id="4" template="../prefabs/Asteroid.tx" x="236" y="187"/>
+     <object id="5" template="../prefabs/Asteroid.tx" x="269" y="205"/>
+     <object id="6" template="../prefabs/Asteroid.tx" x="256" y="251"/>
+     <object id="7" template="../prefabs/Asteroid.tx" x="318" y="237"/>
+     <object id="8" template="../prefabs/Asteroid.tx" x="299" y="263"/>
+     <object id="9" template="../prefabs/Asteroid.tx" x="289" y="297"/>
+     <object id="10" template="../prefabs/Asteroid.tx" x="285" y="324"/>
+     <object id="11" template="../prefabs/Asteroid.tx" x="278" y="375"/>
+     <object id="12" template="../prefabs/Asteroid.tx" x="252" y="425"/>
+     <object id="13" template="../prefabs/Asteroid.tx" x="215" y="464"/>
+     <object id="14" template="../prefabs/Asteroid.tx" x="169" y="522"/>
+     <object id="15" template="../prefabs/Asteroid.tx" x="60" y="622"/>
+     <object id="21" template="../prefabs/Asteroid.tx" x="250" y="151"/>
+     <object id="22" template="../prefabs/Asteroid.tx" x="237" y="173.5"/>
+     <object id="23" template="../prefabs/Asteroid.tx" x="250.5" y="194"/>
+     <object id="24" template="../prefabs/Asteroid.tx" x="257.5" y="205"/>
+     <object id="25" template="../prefabs/Asteroid.tx" x="285.5" y="217"/>
+     <object id="26" template="../prefabs/Asteroid.tx" x="303" y="228"/>
+     <object id="27" template="../prefabs/Asteroid.tx" x="311.5" y="255"/>
+     <object id="28" template="../prefabs/Asteroid.tx" x="266" y="255.5"/>
+     <object id="29" template="../prefabs/Asteroid.tx" x="273.5" y="271"/>
+     <object id="30" template="../prefabs/Asteroid.tx" x="274" y="277"/>
+     <object id="31" template="../prefabs/Asteroid.tx" x="278" y="287.5"/>
+     <object id="32" template="../prefabs/Asteroid.tx" x="285" y="337"/>
+     <object id="33" template="../prefabs/Asteroid.tx" x="285.5" y="347.5"/>
+     <object id="34" template="../prefabs/Asteroid.tx" x="285" y="359"/>
+     <object id="35" template="../prefabs/Asteroid.tx" x="271.5" y="381"/>
+     <object id="36" template="../prefabs/Asteroid.tx" x="265" y="401.5"/>
+     <object id="37" template="../prefabs/Asteroid.tx" x="274.5" y="393.5"/>
+     <object id="38" template="../prefabs/Asteroid.tx" x="257" y="416"/>
+     <object id="39" template="../prefabs/Asteroid.tx" x="243.5" y="432.5"/>
+     <object id="40" template="../prefabs/Asteroid.tx" x="236.5" y="444"/>
+     <object id="41" template="../prefabs/Asteroid.tx" x="226" y="457"/>
+     <object id="42" template="../prefabs/Asteroid.tx" x="207" y="478"/>
+     <object id="43" template="../prefabs/Asteroid.tx" x="181" y="493.5"/>
+     <object id="44" template="../prefabs/Asteroid.tx" x="178" y="513.5"/>
+     <object id="45" template="../prefabs/Asteroid.tx" x="189" y="526"/>
+     <object id="46" template="../prefabs/Asteroid.tx" x="209" y="543"/>
+     <object id="47" template="../prefabs/Asteroid.tx" x="266" y="550"/>
+     <object id="48" template="../prefabs/Asteroid.tx" x="246" y="549.5"/>
+     <object id="49" template="../prefabs/Asteroid.tx" x="219.5" y="545"/>
+     <object id="50" template="../prefabs/Asteroid.tx" x="187.5" y="533.5"/>
+     <object id="51" template="../prefabs/Asteroid.tx" x="180" y="539"/>
+     <object id="52" template="../prefabs/Asteroid.tx" x="30" y="92.5"/>
+     <object id="53" template="../prefabs/Asteroid.tx" x="147.5" y="140.5"/>
+     <object id="54" template="../prefabs/Asteroid.tx" x="132.5" y="123"/>
+     <object id="55" template="../prefabs/Asteroid.tx" x="125" y="116"/>
+     <object id="56" template="../prefabs/Asteroid.tx" x="81.5" y="128.5"/>
+     <object id="57" template="../prefabs/Asteroid.tx" x="79" y="136"/>
+     <object id="58" template="../prefabs/Asteroid.tx" x="56" y="159"/>
+     <object id="59" template="../prefabs/Asteroid.tx" x="60.5" y="177"/>
+     <object id="60" template="../prefabs/Asteroid.tx" x="105" y="182"/>
+     <object id="61" template="../prefabs/Asteroid.tx" x="105" y="184"/>
+     <object id="62" template="../prefabs/Asteroid.tx" x="104.5" y="184.5"/>
+     <object id="63" template="../prefabs/Asteroid.tx" x="165" y="150.5"/>
+     <object id="64" template="../prefabs/Asteroid.tx" x="159.5" y="127"/>
+     <object id="65" template="../prefabs/Asteroid.tx" x="143.5" y="95"/>
+     <object id="66" template="../prefabs/Asteroid.tx" x="94.5" y="78.5"/>
+     <object id="67" template="../prefabs/Asteroid.tx" x="141.5" y="69"/>
+     <object id="68" template="../prefabs/Asteroid.tx" x="183" y="90"/>
+     <object id="69" template="../prefabs/Asteroid.tx" x="62.5" y="113.5"/>
+     <object id="70" template="../prefabs/Asteroid.tx" x="38" y="137.5"/>
+     <object id="71" template="../prefabs/Asteroid.tx" x="29" y="175.5"/>
+     <object id="72" template="../prefabs/Asteroid.tx" x="57" y="207.5"/>
+     <object id="73" template="../prefabs/Asteroid.tx" x="104.5" y="208.5"/>
+     <object id="74" template="../prefabs/Asteroid.tx" x="153" y="190"/>
+     <object id="75" template="../prefabs/Asteroid.tx" x="204" y="158.5"/>
+     <object id="82" template="../prefabs/Asteroid.tx" x="624" y="116"/>
+     <object id="83" template="../prefabs/Asteroid.tx" x="657.333" y="197.333"/>
+     <object id="84" template="../prefabs/Asteroid.tx" x="645.333" y="168"/>
+     <object id="85" template="../prefabs/Asteroid.tx" x="624" y="156"/>
+     <object id="86" template="../prefabs/Asteroid.tx" x="605.333" y="94.6667"/>
+     <object id="87" template="../prefabs/Asteroid.tx" x="656" y="81.3333"/>
+     <object id="88" template="../prefabs/Asteroid.tx" x="713.333" y="68"/>
+     <object id="89" template="../prefabs/Asteroid.tx" x="661.333" y="65.3333"/>
+     <object id="90" template="../prefabs/Asteroid.tx" x="625.333" y="70.6667"/>
+     <object id="91" template="../prefabs/Asteroid.tx" x="681.333" y="221.333"/>
+     <object id="92" template="../prefabs/Asteroid.tx" x="665.333" y="273.333"/>
+     <object id="93" template="../prefabs/Asteroid.tx" x="653.333" y="293.333"/>
+     <object id="94" template="../prefabs/Asteroid.tx" x="653.333" y="293.333"/>
+     <object id="95" template="../prefabs/Asteroid.tx" x="600" y="358.667"/>
+     <object id="96" template="../prefabs/Asteroid.tx" x="604" y="682.667"/>
+     <object id="97" template="../prefabs/Asteroid.tx" x="680" y="729.333"/>
+     <object id="98" template="../prefabs/Asteroid.tx" x="713.333" y="736"/>
+     <object id="99" template="../prefabs/Asteroid.tx" x="794.667" y="716"/>
+     <object id="100" template="../prefabs/Asteroid.tx" x="810.667" y="689.333"/>
+     <object id="101" template="../prefabs/Asteroid.tx" x="785.333" y="604"/>
+     <object id="102" template="../prefabs/Asteroid.tx" x="782.667" y="596"/>
+     <object id="103" template="../prefabs/Asteroid.tx" x="769.333" y="576"/>
+     <object id="104" template="../prefabs/Asteroid.tx" x="732" y="518.667"/>
+     <object id="105" template="../prefabs/Asteroid.tx" x="766.667" y="650.667"/>
+     <object id="106" template="../prefabs/Asteroid.tx" x="742.667" y="694.667"/>
+     <object id="107" template="../prefabs/Asteroid.tx" x="728" y="721.333"/>
+     <object id="108" template="../prefabs/Asteroid.tx" x="484" y="804"/>
+     <object id="109" template="../prefabs/Asteroid.tx" x="529.333" y="809.333"/>
+     <object id="110" template="../prefabs/Asteroid.tx" x="553.333" y="844"/>
+     <object id="111" template="../prefabs/Asteroid.tx" x="553.333" y="862.667"/>
+     <object id="112" template="../prefabs/Asteroid.tx" x="513.333" y="908"/>
+     <object id="113" template="../prefabs/Asteroid.tx" x="485.333" y="916"/>
+     <object id="114" template="../prefabs/Asteroid.tx" x="424" y="916"/>
+     <object id="115" template="../prefabs/Asteroid.tx" x="389.333" y="909.333"/>
+     <object id="116" template="../prefabs/Asteroid.tx" x="389.333" y="909.333"/>
+     <object id="117" template="../prefabs/Asteroid.tx" x="330.667" y="881.333"/>
+     <object id="118" template="../prefabs/Asteroid.tx" x="353.333" y="866.667"/>
+     <object id="119" template="../prefabs/Asteroid.tx" x="401.333" y="856"/>
+     <object id="120" template="../prefabs/Asteroid.tx" x="434.667" y="792"/>
+     <object id="121" template="../prefabs/Asteroid.tx" x="426.667" y="780"/>
+     <object id="122" template="../prefabs/Asteroid.tx" x="408" y="774.667"/>
+     <object id="123" template="../prefabs/Asteroid.tx" x="341.333" y="766.667"/>
+     <object id="124" template="../prefabs/Asteroid.tx" x="338.667" y="784"/>
+     <object id="125" template="../prefabs/Asteroid.tx" x="316" y="800"/>
+     <object id="126" template="../prefabs/Asteroid.tx" x="308" y="800"/>
+     <object id="127" template="../prefabs/Asteroid.tx" x="288" y="848"/>
+     <object id="128" template="../prefabs/Asteroid.tx" x="353.333" y="840"/>
+     <object id="129" template="../prefabs/Asteroid.tx" x="313.333" y="329.333"/>
+     <object id="130" template="../prefabs/Asteroid.tx" x="332" y="356" width="10" height="10"/>
+     <object id="131" template="../prefabs/Asteroid.tx" x="368" y="378.667"/>
+     <object id="132" template="../prefabs/Asteroid.tx" x="400" y="397.333"/>
+     <object id="133" template="../prefabs/Asteroid.tx" x="436" y="389.333"/>
+     <object id="134" template="../prefabs/Asteroid.tx" x="469.333" y="372"/>
+     <object id="135" template="../prefabs/Asteroid.tx" x="484" y="338.667"/>
+     <object id="136" template="../prefabs/Asteroid.tx" x="489.333" y="324"/>
+     <object id="137" template="../prefabs/Asteroid.tx" x="462.667" y="312"/>
+     <object id="138" template="../prefabs/Asteroid.tx" x="448" y="312"/>
+     <object id="139" template="../prefabs/Asteroid.tx" x="426.667" y="313.333"/>
+     <object id="140" template="../prefabs/Asteroid.tx" x="402.667" y="312"/>
+     <object id="141" template="../prefabs/Asteroid.tx" x="369.333" y="288"/>
+     <object id="142" template="../prefabs/Asteroid.tx" x="386.667" y="230.667"/>
+     <object id="143" template="../prefabs/Asteroid.tx" x="434.667" y="230.667"/>
+     <object id="144" template="../prefabs/Asteroid.tx" x="498.667" y="240"/>
+     <object id="151" template="../prefabs/nebula_box.tx" x="326.719" y="477.25"/>
+     <object id="152" template="../prefabs/nebula_box.tx" x="333.25" y="448.5"/>
+     <object id="153" template="../prefabs/nebula_box.tx" x="328.75" y="455.25"/>
+     <object id="154" template="../prefabs/nebula_box.tx" x="301.25" y="452.25"/>
+     <object id="155" template="../prefabs/nebula_box.tx" x="303.75" y="460.75"/>
+     <object id="156" template="../prefabs/nebula_box.tx" x="337.25" y="433"/>
+     <object id="157" template="../prefabs/nebula_box.tx" x="310" y="415.25"/>
+     <object id="158" template="../prefabs/nebula_box.tx" x="274.5" y="441.75"/>
+     <object id="159" template="../prefabs/nebula_box.tx" x="295.25" y="469.5"/>
+     <object id="160" template="../prefabs/nebula_box.tx" x="279.75" y="478.25"/>
+     <object id="161" template="../prefabs/nebula_box.tx" x="366.75" y="515.5"/>
+     <object id="162" template="../prefabs/nebula_box.tx" x="398.75" y="442.75"/>
+     <object id="163" template="../prefabs/nebula_box.tx" x="354" y="398.75"/>
+     <object id="164" template="../prefabs/nebula_box.tx" x="212.25" y="404"/>
+     <object id="165" template="../prefabs/nebula_box.tx" x="240.5" y="369.25"/>
+     <object id="166" template="../prefabs/nebula_box.tx" x="190.25" y="374.75"/>
+     <object id="167" template="../prefabs/nebula_box.tx" x="228" y="357"/>
+     <object id="168" template="../prefabs/nebula_box.tx" x="191" y="344.5"/>
+     <object id="169" template="../prefabs/nebula_box.tx" x="203.5" y="296.25"/>
+     <object id="170" template="../prefabs/nebula_box.tx" x="274.5" y="304.75"/>
+     <object id="171" template="../prefabs/nebula_box.tx" x="346.75" y="355.25"/>
+     <object id="172" template="../prefabs/nebula_box.tx" x="387.25" y="375"/>
+     <object id="173" template="../prefabs/nebula_box.tx" x="411.5" y="377.25"/>
+     <object id="174" template="../prefabs/nebula_box.tx" x="419.5" y="354.75"/>
+     <object id="175" template="../prefabs/nebula_box.tx" x="410.25" y="338.75"/>
+     <object id="176" template="../prefabs/nebula_box.tx" x="388.5" y="334"/>
+     <object id="177" template="../prefabs/nebula_box.tx" x="444" y="869.333"/>
+     <object id="178" template="../prefabs/nebula_box.tx" x="416.667" y="874.667"/>
+     <object id="179" template="../prefabs/nebula_box.tx" x="458.667" y="849.333"/>
+     <object id="180" template="../prefabs/nebula_box.tx" x="522.667" y="832.667"/>
+     <object id="181" template="../prefabs/nebula_box.tx" x="516.667" y="853.333"/>
+     <object id="182" template="../prefabs/nebula_box.tx" x="506.667" y="872.667"/>
+     <object id="183" template="../prefabs/nebula_box.tx" x="498.667" y="865.333"/>
+     <object id="184" template="../prefabs/nebula_box.tx" x="477.333" y="819.333"/>
+     <object id="185" template="../prefabs/nebula_box.tx" x="365.25" y="491.25"/>
+     <object id="186" template="../prefabs/nebula_box.tx" x="282.75" y="235.5"/>
+     <object id="187" template="../prefabs/nebula_box.tx" x="271.75" y="240.25"/>
+     <object id="188" template="../prefabs/nebula_box.tx" x="284.5" y="253.75"/>
+     <object id="189" template="../prefabs/nebula_box.tx" x="305" y="233.25"/>
+     <object id="190" template="../prefabs/nebula_box.tx" x="255.25" y="217.5"/>
+     <object id="191" template="../prefabs/nebula_box.tx" x="231.5" y="192.5"/>
+     <object id="192" template="../prefabs/nebula_box.tx" x="187.5" y="159.5"/>
+     <object id="193" template="../prefabs/nebula_box.tx" x="219.5" y="171.25"/>
+     <object id="194" template="../prefabs/nebula_box.tx" x="197.75" y="110.75"/>
+     <object id="195" template="../prefabs/nebula_box.tx" x="168.5" y="110.75"/>
+     <object id="196" template="../prefabs/nebula_box.tx" x="165.75" y="103.75"/>
+     <object id="197" template="../prefabs/nebula_box.tx" x="163.75" y="92.75"/>
+     <object id="198" template="../prefabs/nebula_box.tx" x="166.75" y="81.25"/>
+     <object id="199" template="../prefabs/nebula_box.tx" x="178.25" y="78.5"/>
+     <object id="200" template="../prefabs/nebula_box.tx" x="198.25" y="81.75"/>
+     <object id="201" template="../prefabs/nebula_box.tx" x="198" y="84.75"/>
+     <object id="202" template="../prefabs/nebula_box.tx" x="193" y="92.5"/>
+     <object id="203" template="../prefabs/nebula_box.tx" x="181.25" y="104.5"/>
+     <object id="204" template="../prefabs/nebula_box.tx" x="389" y="84.5"/>
+     <object id="205" template="../prefabs/nebula_box.tx" x="364.75" y="80.75"/>
+     <object id="206" template="../prefabs/nebula_box.tx" x="361.25" y="76.5"/>
+     <object id="207" template="../prefabs/nebula_box.tx" x="371.25" y="60.25"/>
+     <object id="208" template="../prefabs/nebula_box.tx" x="392.5" y="64.5"/>
+     <object id="209" template="../prefabs/nebula_box.tx" x="400.75" y="71.5"/>
+     <object id="210" template="../prefabs/nebula_box.tx" x="392.25" y="89"/>
+     <object id="211" template="../prefabs/nebula_box.tx" x="366.5" y="103.25"/>
+     <object id="212" template="../prefabs/nebula_box.tx" x="365.5" y="108.25"/>
+     <object id="213" template="../prefabs/nebula_box.tx" x="374.75" y="126"/>
+     <object id="214" template="../prefabs/nebula_box.tx" x="402.5" y="133.5"/>
+     <object id="215" template="../prefabs/nebula_box.tx" x="403.5" y="139.5"/>
+     <object id="216" template="../prefabs/nebula_box.tx" x="399" y="160.75"/>
+     <object id="217" template="../prefabs/nebula_box.tx" x="394.25" y="165"/>
+     <object id="218" template="../prefabs/nebula_box.tx" x="384.75" y="167.75"/>
+     <object id="219" template="../prefabs/nebula_box.tx" x="396.75" y="182.5"/>
+     <object id="220" template="../prefabs/nebula_box.tx" x="404.75" y="190.5"/>
+     <object id="221" template="../prefabs/nebula_box.tx" x="421.75" y="223.75"/>
+     <object id="222" template="../prefabs/nebula_box.tx" x="598.5" y="298.5"/>
+     <object id="223" template="../prefabs/nebula_box.tx" x="639" y="279.5"/>
+     <object id="224" template="../prefabs/nebula_box.tx" x="646" y="267.5"/>
+     <object id="225" template="../prefabs/nebula_box.tx" x="637.5" y="260.5"/>
+     <object id="226" template="../prefabs/nebula_box.tx" x="616" y="247.5"/>
+     <object id="227" template="../prefabs/nebula_box.tx" x="592.5" y="248.5"/>
+     <object id="228" template="../prefabs/nebula_box.tx" x="560.5" y="189"/>
+     <object id="229" template="../prefabs/nebula_box.tx" x="557.5" y="179"/>
+     <object id="230" template="../prefabs/nebula_box.tx" x="554" y="181.5"/>
+     <object id="231" template="../prefabs/nebula_box.tx" x="555.5" y="205.5"/>
+     <object id="232" template="../prefabs/nebula_box.tx" x="572.5" y="253"/>
+     <object id="233" template="../prefabs/nebula_box.tx" x="645.5" y="114.5"/>
+     <object id="234" template="../prefabs/nebula_box.tx" x="624.5" y="87"/>
+     <object id="235" template="../prefabs/nebula_box.tx" x="627" y="84.5"/>
+     <object id="236" template="../prefabs/nebula_box.tx" x="657.5" y="78"/>
+     <object id="237" template="../prefabs/nebula_box.tx" x="710.5" y="70.5"/>
+     <object id="238" template="../prefabs/nebula_box.tx" x="710.5" y="70"/>
+     <object id="239" template="../prefabs/nebula_box.tx" x="665.5" y="67"/>
+     <object id="240" template="../prefabs/nebula_box.tx" x="636" y="64"/>
+     <object id="241" template="../prefabs/nebula_box.tx" x="585" y="80"/>
+     <object id="242" template="../prefabs/nebula_box.tx" x="616" y="106.5"/>
+     <object id="243" template="../prefabs/nebula_box.tx" x="620" y="130"/>
+     <object id="244" template="../prefabs/nebula_box.tx" x="608" y="146"/>
+     <object id="245" template="../prefabs/nebula_box.tx" x="620.5" y="152"/>
+     <object id="246" template="../prefabs/nebula_box.tx" x="651.5" y="155.5"/>
+     <object id="247" template="../prefabs/nebula_box.tx" x="106" y="120.667"/>
+     <object id="248" template="../prefabs/nebula_box.tx" x="79.3333" y="136.667"/>
+     <object id="249" template="../prefabs/nebula_box.tx" x="80" y="155.333"/>
+     <object id="250" template="../prefabs/nebula_box.tx" x="112.667" y="165.333"/>
+     <object id="251" template="../prefabs/nebula_box.tx" x="144.667" y="172"/>
+     <object id="252" template="../prefabs/nebula_box.tx" x="118" y="179.333"/>
+     <object id="253" template="../prefabs/nebula_box.tx" x="62" y="174.667"/>
+     <object id="254" template="../prefabs/nebula_box.tx" x="44.6667" y="153.333"/>
+     <object id="255" template="../prefabs/nebula_box.tx" x="48.6667" y="100.667"/>
+     <object id="256" template="../prefabs/nebula_box.tx" x="117.333" y="78.6667"/>
+     <object id="257" template="../prefabs/nebula_box.tx" x="150" y="79.3333"/>
+     <object id="258" template="../prefabs/nebula_box.tx" x="66.6667" y="89.3333"/>
+     <object id="259" template="../prefabs/nebula_box.tx" x="89.3333" y="185.333"/>
+     <object id="260" template="../prefabs/nebula_box.tx" x="37.3333" y="194.667"/>
+     <object id="261" template="../prefabs/nebula_box.tx" x="83.3333" y="221.333"/>
+     <object id="262" template="../prefabs/nebula_box.tx" x="166" y="206"/>
+     <object id="263" template="../prefabs/nebula_box.tx" x="145.333" y="723.333"/>
+     <object id="264" template="../prefabs/nebula_box.tx" x="112" y="828.667"/>
+     <object id="265" template="../prefabs/nebula_box.tx" x="134" y="786.667"/>
+     <object id="266" template="../prefabs/nebula_box.tx" x="138.667" y="756"/>
+     <object id="267" template="../prefabs/nebula_box.tx" x="126.667" y="748"/>
+     <object id="268" template="../prefabs/nebula_box.tx" x="100.667" y="738"/>
+     <object id="269" template="../prefabs/nebula_box.tx" x="54" y="772"/>
+     <object id="270" template="../prefabs/nebula_box.tx" x="96" y="784.667"/>
+     <object id="271" template="../prefabs/nebula_box.tx" x="120" y="749.333"/>
+     <object id="272" template="../prefabs/nebula_box.tx" x="71.3333" y="716"/>
+     <object id="273" template="../prefabs/nebula_box.tx" x="135.333" y="721.333"/>
+     <object id="274" template="../prefabs/nebula_box.tx" x="171.333" y="708.667"/>
+     <object id="275" template="../prefabs/nebula_box.tx" x="218.667" y="744"/>
+     <object id="276" template="../prefabs/nebula_box.tx" x="181.333" y="811.333"/>
+     <object id="277" template="../prefabs/nebula_box.tx" x="47.3333" y="827.333"/>
+     <object id="278" template="../prefabs/nebula_box.tx" x="92.6667" y="816"/>
+     <object id="279" template="../prefabs/nebula_box.tx" x="106" y="851.333"/>
+     <object id="280" template="../prefabs/nebula_box.tx" x="156.667" y="847.333"/>
+     <object id="281" template="../prefabs/nebula_box.tx" x="171.333" y="835.333"/>
+     <object id="282" template="../prefabs/nebula_box.tx" x="176.667" y="768.667"/>
+     <object id="283" template="../prefabs/nebula_box.tx" x="188.667" y="704"/>
+     <object id="284" template="../prefabs/nebula_box.tx" x="209.333" y="683.333"/>
+     <object id="285" template="../prefabs/nebula_box.tx" x="58" y="672"/>
+     <object id="286" template="../prefabs/nebula_box.tx" x="120" y="682"/>
+     <object id="287" template="../prefabs/nebula_box.tx" x="150.667" y="682"/>
+     <object id="288" template="../prefabs/nebula_box.tx" x="207.333" y="680"/>
+     <object id="289" template="../prefabs/nebula_box.tx" x="719" y="396"/>
+     <object id="290" template="../prefabs/nebula_box.tx" x="665" y="385"/>
+     <object id="291" template="../prefabs/nebula_box.tx" x="605" y="436"/>
+     <object id="292" template="../prefabs/nebula_box.tx" x="648" y="449"/>
+     <object id="293" template="../prefabs/nebula_box.tx" x="703" y="436"/>
+     <object id="294" template="../prefabs/nebula_box.tx" x="721" y="420"/>
+     <object id="295" template="../prefabs/nebula_box.tx" x="677" y="406"/>
+     <object id="296" template="../prefabs/nebula_box.tx" x="626" y="403"/>
+     <object id="297" template="../prefabs/nebula_box.tx" x="646" y="417"/>
+     <object id="298" template="../prefabs/nebula_box.tx" x="676" y="435"/>
+     <object id="299" template="../prefabs/nebula_box.tx" x="626" y="468"/>
+     <object id="300" template="../prefabs/nebula_box.tx" x="676" y="480"/>
+     <object id="301" template="../prefabs/nebula_box.tx" x="716" y="436"/>
+     <object id="302" template="../prefabs/nebula_box.tx" x="743" y="414"/>
+     <object id="303" template="../prefabs/nebula_box.tx" x="735" y="457"/>
+     <object id="304" template="../prefabs/nebula_box.tx" x="710" y="466"/>
+     <object id="305" template="../prefabs/nebula_box.tx" x="699.667" y="710.333"/>
+     <object id="306" template="../prefabs/nebula_box.tx" x="719.333" y="694.667"/>
+     <object id="307" template="../prefabs/nebula_box.tx" x="715.667" y="677.667"/>
+     <object id="308" template="../prefabs/nebula_box.tx" x="711.667" y="661.333"/>
+     <object id="309" template="../prefabs/nebula_box.tx" x="726" y="651.333"/>
+     <object id="310" template="../prefabs/nebula_box.tx" x="736.667" y="647.667"/>
+     <object id="311" template="../prefabs/nebula_box.tx" x="746" y="644.667"/>
+     <object id="312" template="../prefabs/nebula_box.tx" x="729.667" y="622"/>
+     <object id="313" template="../prefabs/nebula_box.tx" x="714.333" y="626"/>
+     <object id="314" template="../prefabs/nebula_box.tx" x="687.333" y="637.333"/>
+     <object id="315" template="../prefabs/nebula_box.tx" x="680.667" y="645.667"/>
+     <object id="316" template="../prefabs/nebula_box.tx" x="658.667" y="661"/>
+     <object id="317" template="../prefabs/nebula_box.tx" x="668.333" y="673.667"/>
+     <object id="318" template="../prefabs/nebula_box.tx" x="668.667" y="684.333"/>
+     <object id="319" template="../prefabs/nebula_box.tx" x="678.333" y="697.667"/>
+     <object id="320" template="../prefabs/nebula_box.tx" x="662.667" y="710.333"/>
+     <object id="321" template="../prefabs/nebula_box.tx" x="639" y="709.333"/>
+     <object id="322" template="../prefabs/nebula_box.tx" x="631.667" y="689.333"/>
+     <object id="323" template="../prefabs/nebula_box.tx" x="639" y="679.667"/>
+     <object id="324" template="../prefabs/nebula_box.tx" x="645" y="674"/>
+     <object id="325" template="../prefabs/nebula_box.tx" x="632.667" y="651.667"/>
+    </objectgroup>
+   </group>
+  </group>
+ </group>
+</map>

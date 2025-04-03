@@ -1,0 +1,49 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+        {
+            "arguments": "%projectpath/commands/export.py %mapfile",
+            "command": "python",
+            "enabled": true,
+            "name": "export_map",
+            "saveBeforeExecute": true,
+            "shortcut": null,
+            "showOutput": true,
+            "workingDirectory": "%mappath"
+        },
+        {
+            "arguments": "%projectpath/commands/export.py %worldfile",
+            "command": "python",
+            "enabled": true,
+            "name": "export_world",
+            "saveBeforeExecute": true,
+            "shortcut": null,
+            "showOutput": true,
+            "workingDirectory": "%mappath"
+        }
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "export",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+        {
+            "id": 1,
+            "name": "race",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "kralien",
+                "tsn",
+                "torgoth",
+                "arvonian",
+                "skaaran",
+                "ximni"
+            ],
+            "valuesAsFlags": false
+        }
+    ]
+}

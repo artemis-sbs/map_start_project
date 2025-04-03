@@ -48,8 +48,8 @@ def get_custom_properties(node):
                         props[name] = int(value)
                     elif t == "color":
                         props[name] = value
-
-                    props[name] = value
+                    else:
+                        props[name] = value
 
     return props    
 
@@ -59,7 +59,9 @@ def process_object_group(group, prefix):
     ret = []
     objs = []
     group_name = group.attrib.get("name","")
-    func_name = f"{prefix}_{group_name}".lower().replace(" ", "_")
+    func_name = f"{group_name}".lower().replace(" ", "_")
+    if prefix is not None:
+        func_name = f"{prefix}_{group_name}".lower().replace(" ", "_")
     
     for child in group:
         if child.tag =="objectgroup":
@@ -69,7 +71,7 @@ def process_object_group(group, prefix):
     
     if len(objs)>0:
         stream = StringIO()
-        stream.write(f"def {func_name}(OFFSET_X=0, OFFSET_Z=0):\n")
+        stream.write(f"def {func_name}(OFFSET_X={OFFSET_X}, OFFSET_Z={OFFSET_Y}):\n")
         stream.write(f"    map_data = {objs}\n")
         stream.write(f"    for p in map_data:\n")
         stream.write(f"        prefab_spawn(p['label'], p['data'], OFFSET_X, OFFSET_Z )\n")
@@ -122,7 +124,48 @@ def process_object(ob):
 
     if prefab is not None:
         return  {"label": prefab, "data": props}
-    
+
+OFFSET_X = 0
+OFFSET_Y = 0
+def process_map(map_file):
+    tree = ET.parse(map_file)
+    map_out = map_file.replace(".tmx", ".py")
+
+    map_data = ["from sbs_utils.procedural.prefab import prefab_spawn\n\n"]
+    for child in tree.getroot():
+        if child.tag =="group":
+            map_data.extend(process_group(child, None))
+        elif child.tag =="objectgroup":
+            map_data.extend(process_object_group(child, None))
+
+    with open(map_out, "w") as stream:
+        for s in map_data:
+            stream.writelines(s)
+            print(s)
+
+import json
+def process_world(map_file):
+    global OFFSET_X
+    global OFFSET_Y
+
+    try:
+        with open(map_file, 'r') as file:
+            data = json.load(file)
+            maps = data.get("maps", [])
+            for map in maps:
+                file_name = map.get("fileName")
+                if file_name is None:
+                    continue
+                OFFSET_X = map.get("x", 0)
+                OFFSET_Y = map.get("y", 0)
+                process_map(file_name)
+
+    except Exception as e:
+         print(f"An unexpected error occurred: {e}")
+         return None
+
+
+
 
 if __name__ == "__main__":
     
@@ -131,22 +174,16 @@ if __name__ == "__main__":
     else:
         print("No map specified")
         sys.exit()
+
+    if map_file.endswith("world"):
+        process_world(map_file)
+        sys.exit()
+    else:
+        process_map(map_file)
+        sys.exit()
     
-    tree = ET.parse(map_file)
-    map_out = map_file.replace(".tmx", ".py")
 
-
-    map_data = []
-    for child in tree.getroot():
-        if child.tag =="group":
-            map_data.extend(process_group(child, None))
-
-    with open(map_out, "w") as stream:
-        for s in map_data:
-            stream.writelines(s)
-            print(s)
-
-
+    
 
 
 

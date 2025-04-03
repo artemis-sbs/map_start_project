@@ -1,0 +1,33 @@
+=== prefab_terrain_asteroid_box
+metadata: ``` yaml
+display_text: Asteroid box
+```
+    terrain_value = terrain_to_value(TERRAIN_SELECT)
+    test_spawn_asteroid_box(START_X, START_Y, START_Z, SIZE_X, SIZE_Z, density_scale=terrain_value)
+    ->END
+
+=== prefab_terrain_asteroid_sphere
+metadata: ``` yaml
+display_text: Asteroid sphere
+```
+    terrain_value = terrain_to_value(TERRAIN_SELECT)
+    test_spawn_asteroid_sphere(START_X, START_Y, START_Z, SIZE_X, density_scale=terrain_value)
+    #nav_id = sim.add_navarea(START_X, START_Z, START_X+SIZE_X, START_Z,START_X, START_Z+SIZE_Z,START_X+SIZE_X, START_Z+SIZE_Z, "ast", "cyan")
+    ->END
+
+
+=== prefab_terrain_nebula_box
+metadata: ``` yaml
+display_text: Nebula box
+```
+    terrain_value = terrain_to_value(TERRAIN_SELECT)
+    test_spawn_nebula_box(START_X, START_Y, START_Z, SIZE_X, SIZE_Z, density_scale=terrain_value)
+    ->END
+
+=== prefab_terrain_nebula_sphere
+metadata: ``` yaml
+display_text: Nebula sphere
+```
+    terrain_value = terrain_to_value(TERRAIN_SELECT)
+    test_spawn_nebula_sphere(START_X, START_Y, START_Z, SIZE_X, density_scale=terrain_value)
+    ->END

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <tileset firstgid="1" source="Cosmos-card-tiles.tsx"/>
- <object name="DS ##" type="@prefab/station/command" gid="3" width="10" height="10">
+ <tileset firstgid="1" source="cosmos-core-tiles.tsx"/>
+ <object name="DS ##" type="prefab_station_command" gid="3" width="10" height="10">
   <properties>
    <property name="side" value="tsn"/>
   </properties>

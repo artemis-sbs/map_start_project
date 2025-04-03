@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="cosmos-core-tiles.tsx"/>
+ <object name="Typhon" type="prefab_typhon_classic" gid="5" width="10" height="10"/>
+</template>

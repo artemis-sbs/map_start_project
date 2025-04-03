@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="cosmos-core-tiles.tsx"/>
+ <object name="Fleet" type="prefab_fleet_raider" gid="6" width="10" height="10">
+  <properties>
+   <property name="fleet_difficulty" type="int" value="0"/>
+   <property name="race" propertytype="race" value="kralien"/>
+   <property name="ship_roles" value="raider"/>
+  </properties>
+ </object>
+</template>
