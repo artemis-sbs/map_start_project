@@ -27,9 +27,9 @@ trigger_label: END
         # Z is flipped logically
         bottom = max(START_Z,  -(-START_Z + SIZE_Z))
 
-        print(f"trigger check  {START_X} < {pos.x} > {START_X+SIZE_X}\n {top} {pos.z} {bottom} _{trigger_label}_")
+        #print(f"trigger check  {START_X} < {pos.x} > {START_X+SIZE_X}\n {top} {pos.z} {bottom} _{trigger_label}_")
         if pos.x > left and pos.x < right and pos.z > top and pos.z < bottom:
-            print("TRIGGER")
+            #print("TRIGGER")
             task_schedule(trigger_label)
             -> END if end_on_enter
     await delay_sim(5)

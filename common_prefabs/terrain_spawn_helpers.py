@@ -3,6 +3,7 @@ from sbs_utils.procedural.spawn import terrain_spawn
 from sbs_utils.procedural.ship_data import plain_asteroid_keys
 from sbs_utils import scatter
 import random
+import math
 
 
 
@@ -34,6 +35,45 @@ def test_spawn_asteroid_sphere(x,y,z, radius=10000, density_scale=1.0, density=1
 
     cluster_spawn_points = scatter.sphere(amount,  x, y,z, radius)
     test_spawn_asteroid_scatter(cluster_spawn_points, height)
+
+def test_spawn_asteroid_points(x,y,z, points, radius=10000, density_scale=1.0, density=1, height=1000):
+    
+    if density_scale==0:
+        return
+    if density==0:
+        return
+    if len(points)==0:
+        return
+    # grid = radius/1000
+    # grid = grid + grid
+
+    # amount = max(int(grid * density), 1)
+    # amount = random.randrange(int(amount* density_scale))
+    my_iter = iter(points)
+    pt1 = next(my_iter)
+    
+    # Remember z is flipped
+    for pt2 in my_iter:
+        x1 = pt1[0] + x
+        y1 = height
+        z1 = -(-z + pt1[1])
+
+        x2 = pt2[0] + x
+        y2 = height
+        z2 = -(-z + pt2[1])
+        pt1 = pt2
+
+        length = math.sqrt((x2-x1)**2 + (z2-z1)**2)
+        length = 20
+
+        amount = random.randrange(int(length* density_scale))
+        amount = length
+
+        #print(f"POLYLINE {x1},{z1} {x2},{z2} {length} {amount}" )
+
+        cluster_spawn_points = scatter.line(amount, x1, y1, z1, x2,y2, z2, True)
+        test_spawn_asteroid_scatter(cluster_spawn_points, height)
+
 
 
 def test_spawn_asteroid_scatter(cluster_spawn_points, height):

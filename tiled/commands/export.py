@@ -67,7 +67,9 @@ def process_object_group(group, prefix):
         if child.tag =="objectgroup":
             ret.extend(process_object_group(child, func_name))
         if child.tag =="object":
-            objs.append(process_object(child))
+            o = process_object(child)
+            if o is not None:
+                objs.append(o)
     
     if len(objs)>0:
         stream = StringIO()
@@ -93,6 +95,35 @@ def process_object(ob):
     template = ob.attrib.get("template")
     label = ob.attrib.get("type")
     props = get_custom_properties(ob)
+
+
+    for child in ob:
+        if child.tag =="polyline" or child.tag =="polygon":
+            s_points = child.get("points")
+            points = []
+            pairs = s_points.split()
+            
+
+            for pair in pairs:
+                coords = pair.split(',')
+                px = float(coords[0]) *100
+                py = float(coords[1]) * 100 
+                points.append((px, py))
+
+            props["points"] = points
+            if child.tag =="polygon":
+                props["is_polygon"] = True
+            else:
+                props["is_polyline"] = True
+
+            continue
+        if child.tag =="point":
+            props["is_point"] = True
+            continue
+        if child.tag =="ellipse":
+            props["is_ellipse"] = True
+            continue
+
     
     # pytmx does not properly support templates
     # which sucks
@@ -124,6 +155,7 @@ def process_object(ob):
 
     if prefab is not None:
         return  {"label": prefab, "data": props}
+    
 
 OFFSET_X = 0
 OFFSET_Y = 0
