@@ -52,15 +52,15 @@ def test_spawn_asteroid_points(x,y,z, points, radius=10000, density_scale=1.0, d
     my_iter = iter(points)
     pt1 = next(my_iter)
     
-    # Remember z is flipped
+    # Z- was already flipped by map export
     for pt2 in my_iter:
         x1 = pt1[0] + x
         y1 = height
-        z1 = -(-z + pt1[1])
+        z1 = (z + pt1[1])
 
         x2 = pt2[0] + x
         y2 = height
-        z2 = -(-z + pt2[1])
+        z2 = (z + pt2[1])
         pt1 = pt2
 
         length = math.sqrt((x2-x1)**2 + (z2-z1)**2)

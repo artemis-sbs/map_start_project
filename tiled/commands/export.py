@@ -107,7 +107,8 @@ def process_object(ob):
             for pair in pairs:
                 coords = pair.split(',')
                 px = float(coords[0]) *100
-                py = float(coords[1]) * 100 
+                # Flip Z
+                py = -float(coords[1]) * 100 
                 points.append((px, py))
 
             props["points"] = points
