@@ -16,11 +16,17 @@ def test_spawn_asteroid_box(x,y,z, size_x=10000,size_z=None, density_scale=1.0, 
     if size_z is None:
         size_z = size_x
     
-    grid = size_x/1000 + size_z/1000
+    grid = size_x/1000 + abs(size_z/1000)
     amount = max(int(grid * density), 1)
     amount = random.randrange(int(amount/2), int(amount* density_scale))
+
+    cz = z+size_z/2
+    # Map editor send size_z as negative for flipping
+    if size_z <0:
+        cz = (z-size_z/2)
+        size_z = -size_z
     
-    cluster_spawn_points = scatter.box(amount,  x + size_x/2, -height/2, z+size_z/2, size_x, height/2, size_z, True, 0, 0, 0 )
+    cluster_spawn_points = scatter.box(amount,  x + size_x/2, -height/2, cz, size_x, height/2, size_z, True, 0, 0, 0 )
     test_spawn_asteroid_scatter(cluster_spawn_points, height)
 
 

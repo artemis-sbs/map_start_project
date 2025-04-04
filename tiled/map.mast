@@ -20,12 +20,16 @@ trigger_label: END
         pos = o.pos
         #print(f"trigger check  {START_X} < {pos.x} > {START_X+SIZE_X}\n {START_Z} {pos.z} {START_Z+SIZE_Z} _{trigger_label}_")
 
-        
+        # Flipping Z is for the map tool vs. Cosmos Z
+        # So this only works for map editor?
+        # Should SIZE_Z from map be negative?
         left = min(START_X,  START_X + SIZE_X)
         right = max(START_X,  START_X + SIZE_X)
         top = min(START_Z,  -(-START_Z + SIZE_Z))
+        top = min(START_Z,  (START_Z + SIZE_Z))
         # Z is flipped logically
         bottom = max(START_Z,  -(-START_Z + SIZE_Z))
+        bottom = max(START_Z,  (START_Z + SIZE_Z))
 
         #print(f"trigger check  {START_X} < {pos.x} > {START_X+SIZE_X}\n {top} {pos.z} {bottom} _{trigger_label}_")
         if pos.x > left and pos.x < right and pos.z > top and pos.z < bottom:

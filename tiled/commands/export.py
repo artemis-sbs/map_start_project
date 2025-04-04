@@ -151,7 +151,15 @@ def process_object(ob):
     props["START_Z"] = -y
     props["SIZE_X"] = w
     props["SIZE_Y"] = size_y
-    props["SIZE_Z"] = h
+    #
+    # Z-is flipped in engine
+    # The best way to express this is
+    # also negating SIZE_Z
+    # Math usually works, if not the 
+    # library code maybe should be updated
+    # - SIZE_Z also tells other code it is from the map
+    #
+    props["SIZE_Z"] = -h
     props["NAME"] = name
 
     if prefab is not None:
