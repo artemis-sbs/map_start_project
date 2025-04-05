@@ -91,11 +91,11 @@ def process_object(ob):
     w *= 100
     h = float(ob.attrib.get("height",0))
     h *= 100
-    name = ob.attrib.get("name","")
+    name = ob.attrib.get("name")
     template = ob.attrib.get("template")
     label = ob.attrib.get("type")
     props = get_custom_properties(ob)
-
+    
 
     for child in ob:
         if child.tag =="polyline" or child.tag =="polygon":
@@ -136,11 +136,16 @@ def process_object(ob):
         root = tree.getroot()
         for child in root:
             if child.tag == "object":
-                prefab = child.get("type")
-                merged =  child.attrib | ob.attrib
-                print(merged)
+                #merged =  child.attrib | ob.attrib
+                if name is None or name == "":
+                    name = child.attrib.get("name")
+                if prefab is None or prefab == "":
+                    prefab = child.attrib.get("type")
             temp_props = get_custom_properties(child)
         props = temp_props | props
+        
+
+
     #
     #
     #
